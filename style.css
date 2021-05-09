@@ -1,7 +1,8 @@
 *{
     margin:0;
-    padding:0;
+    padding:10px;
     box-sizing: border-box;
+    background-color: #5d296d;
 }
 
 .navbar{
@@ -23,15 +24,16 @@ nav ul{
 nav ul li{
     display: inline-block;
     margin-right: 20px;
+
 }
 
 a{
    text-decoration: none;
-   color: rgb(0, 0, 0) 
+   color: rgb(3, 230, 135) 
 }
 
 p{
-    color: rgb(0,0,0)
+    color: rgb(255, 255, 255)
  }
 
  .container{
@@ -49,13 +51,14 @@ p{
  }
 
  .column-2{
-     flex-basis: 50%;
+     flex-basis: 30%;
      min-width: 300px;
 
  }
 
  .column-2 img{
-    min-width: 50%;
+    min-width: 40%;
+    min-height: 40%;
     padding: 50px 0;
     
 }
