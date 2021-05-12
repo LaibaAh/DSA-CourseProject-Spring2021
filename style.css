@@ -4,6 +4,14 @@
     box-sizing: border-box;
     background-color: #5d296d;
 }
+.container {
+    max-width: 250px;
+    align-items: center;
+    margin:  10 auto;
+    padding: 15px;
+    flex-wrap: wrap;
+
+  }
 
 .navbar{
    display: flex;
