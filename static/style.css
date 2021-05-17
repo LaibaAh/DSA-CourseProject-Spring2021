@@ -17,7 +17,7 @@
 .navbar{
    display: flex;
    align-items: center;
-   padding: 20px;
+   padding: 10px;
 }
 
 .left-column{
@@ -35,13 +35,13 @@ nav{
 }
 
 nav ul{ 
-    display: inline-block;
+    display: inline-flex;
     list-style-type: none;
 }
 
 nav ul li{
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 10px;
 
 }
 
