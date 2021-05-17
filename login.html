@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login|Sign Up - HU Dukaan</title>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="C:\Users\laiba\Desktop\HU-dukan\DSA-CourseProject-Spring2021\images\Dukaan Logo.png" width="125px">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="C:\Users\laiba\Desktop\HU-dukan\DSA-CourseProject-Spring2021\home.html">Home</a></li>
+                    <li><a href="C:\Users\laiba\Desktop\HU-dukan\DSA-CourseProject-Spring2021\shop.html">Shop</a></li>
+                    <li><a href="C:\Users\laiba\Desktop\HU-dukan\DSA-CourseProject-Spring2021\contactus.html">Contact Us</a></li>
+                    <li><a href="C:\Users\laiba\Desktop\HU-dukan\DSA-CourseProject-Spring2021\login.html">Login/Sign-Up</a></li>
+                </ul>
+            </nav>
+        </div> 
+
+    <form id ="login" class="form-box">
+        <div class="button-bar">
+            <button type="button" class="tog-button" href="C:\Users\laiba\Desktop\HU-dukan\DSA-CourseProject-Spring2021\login.html">Login</button>
+            <button type="button" class="tog-button" href="C:\Users\laiba\Desktop\HU-dukan\DSA-CourseProject-Spring2021\signup.html">SignUp</button>
+            
+        </div>
+        <div class="input">
+            <input type="text" class="input-area" placeholder="User Id " required>
+            <input type="password" class="input-area" placeholder="Enter password" required>
+            <button type="submit" class="submit">LogIn</button>
+
+        </div>
+
+    </form>
+    <form id="SignUp" class="form-box">
+        <div class="button-bar">
+            <button type="button" class="tog-button">Login</button>
+            <button type="button" class="tog-button" href="C:\Users\laiba\Desktop\HU-dukan\DSA-CourseProject-Spring2021\login.html">SignUp</button>
+            
+        </div>
+        <div class="input">
+            <input type="email" class="input-area" placeholder="Enter Email" required>
+            <input type="text" class="input-area" placeholder="User Id " required>
+            <input type="password" class="input-area" placeholder="Enter password" required>
+            <button type="submit" class="submit">Sign-Up</button>
+
+        </div>
+
+    </form>
+
+    <script>
+        var x = document.getElementById("login")
+        var y = document.getElementById("SignUp")
+
+        function SignUp() {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+
+        }
+
+        function login() {
+            x.style.left = "50px";
+            y.style.left = "450px";
+
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

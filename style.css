@@ -2,7 +2,8 @@
     margin:0;
     padding:10px;
     box-sizing: border-box;
-    background-color: #5d296d;
+    background-color: purple;
+    font-family: sans-serif;
 }
 .container {
     max-width: 250px;
@@ -17,6 +18,15 @@
    display: flex;
    align-items: center;
    padding: 20px;
+}
+
+.left-column{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200%;
+    margin-bottom: 50px;
+
+
 }
 
 nav{
@@ -69,4 +79,64 @@ p{
     min-height: 40%;
     padding: 50px 0;
     
+}
+
+.form-box{
+    width: 380px;
+    height: 380px;
+    position: relative;
+    margin: 6% auto;
+    background-color: wheat;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.button-bar{
+    width: 180px;
+    margin: 45px auto;
+    position: relative;
+}
+
+.tog-button{
+    width: 45%;
+    padding:10px 10px;
+    display: inline-block;
+    margin: auto;
+
+}
+
+.input{
+    width: 280px;
+    margin: 35px auto;
+    position: center;
+
+}
+
+.input-area{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-bottom: 1px snow;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+
+}
+
+.submit{
+    width: 85%;
+    padding:10px 30px;
+    display: block;
+    margin: auto;
+
+
+}
+
+#login{
+    left: 10px;
+}
+
+
+#SignUp{
+    left: 150px;
 }
