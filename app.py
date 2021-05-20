@@ -1,5 +1,7 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request,redirect
 from flask import url_for
+import os 
+import sqlite3
 
 
 ad_list = {"Hu Dukaan": [("Cafeteria", 2), ("Dhaaba", 2), ("East Street", 3)],
@@ -199,47 +201,47 @@ def getShortestPath(ad_list, start, Des):  # Dijkstra
     return path
 
 
-# First as the customer for the proper Destination.
-Your_Destination = input(("Please write your destination for the delivery: "))
+# # First as the customer for the proper Destination.
+# Your_Destination = input(("Please write your destination for the delivery: "))
 
-# If proper destination not written then print the message Enter valid destination.
+# # If proper destination not written then print the message Enter valid destination.
 
-if Your_Destination not in ad_list:
-    print("Invalid Destination")
+# if Your_Destination not in ad_list:
+#     print("Invalid Destination")
 
-# running our DA algorithm to get the minimum time from Hu dukaan to customer's destination, simple.
-result = (getShortestPath(ad_list, "Hu Dukaan", Your_Destination))
-# print(result) #uncomment to view the traversed path.
+# # running our DA algorithm to get the minimum time from Hu dukaan to customer's destination, simple.
+# result = (getShortestPath(ad_list, "Hu Dukaan", Your_Destination))
+# # print(result) #uncomment to view the traversed path.
 
 # for displaying the minimum delivery time found through our DA algo.
 
 
-def delivery_time(result, Start):
-    lst1 = []
-    Start = "Hu Dukaan"
-    lst1.append(Start)
-    # print(len(result))
-    # if result len is greater than 0 getting the hu dukaan then delivery time for that destination from hu Dukaan)
-    if len(result) > 0:
-        delivery_time = (result[len(result)-1][2])
-        print("The Total Delivery Time is: ", delivery_time, "minutes")
-    # else this!
-    # that is the node is not persent/ destination not valid so result list will be empty!
-    elif len(result) == 0:
-        delivery_time = 0
-        print("Can't determine the delivery time! Please, Enter Valid Destination (Input): ",
-              delivery_time, "minutes")
-# getting the trasvered path as well for the customer  to see.
-    for i in result:
-        delivery_place = i[1]
-        lst1.append(delivery_place)
-    print("The Shortest Path from Hu Dukaan to your destination is: ", lst1)
+    # def delivery_time(result, Start):
+    #     lst1 = []
+    #     Start = "Hu Dukaan"
+    #     lst1.append(Start)
+    #     # print(len(result))
+    #     # if result len is greater than 0 getting the hu dukaan then delivery time for that destination from hu Dukaan)
+    #     if len(result) > 0:
+    #         delivery_time = (result[len(result)-1][2])
+    #         print("The Total Delivery Time is: ", delivery_time, "minutes")
+    #     # else this!
+    #     # that is the node is not persent/ destination not valid so result list will be empty!
+    #     elif len(result) == 0:
+    #         delivery_time = 0
+    #         print("Can't determine the delivery time! Please, Enter Valid Destination (Input): ",
+    #             delivery_time, "minutes")
+    # # getting the trasvered path as well for the customer  to see.
+    #     for i in result:
+    #         delivery_place = i[1]
+    #         lst1.append(delivery_place)
+    #     print("The Shortest Path from Hu Dukaan to your destination is: ", lst1)
 
-    # print(lst1)
+    #     # print(lst1)
 
 
-Start = "Hu Dukaan"
-(delivery_time(result, Start))
+    # Start = "Hu Dukaan"
+    # (delivery_time(result, Start))
 
 # Note:
 # we have kept the input format to me like this "Zen Garden", "Arif Habib Classroom",
@@ -253,19 +255,57 @@ app = Flask(__name__)
 def home():
     return render_template('home.html')
 
-@app.route('/login')
+current_location = os.path.dirname(os.path.abspath(__file__))
+
+@app.route('/login', methods = ["POST"])
 def login():
-    return render_template('login.html')
+    UN = request.form['Username']
+    PW = request.form['Password']
+    sqlconnection= sqlite3.Connection(current_location + "\login.db")
+    cursor = sqlconnection.cursor()
+    query1 = "SELECT Username, Password from Users from WHERE Username = {un} AND Password={pw}".format(un= UN, pw=PW)
+    rows = cursor.execute(query1)
+    rows = rows.fetchall()
+    if len(rows) == 1: 
+        return render_template('login.html')
+    else: 
+        return redirect("/signup")
+
+   
+
+@app.route('/signup', methods=["GET", "POST"])
+
+def signup():
+    if request.method == "POST": 
+        dUN = request.form['DUsername']
+        dPM = request.form['DPassword']
+        Uemail = request.form["Email"]
+        sqlconnection = sqlite3.Connection(current_location + "\login.db")
+        cursor = sqlconnection.cursor()
+        query1 = "INSERT INTO Users VALUES('{u}', '{p}', '{e}')".format(u=dUN, p=dPM, e=Uemail)
+        cursor.execute(query1)
+        sqlconnection.commit()
+        return redirect("/login")
+    return render_template("signup.html")
+
 
 @app.route('/contactus')
 def contactus():
     return render_template('contactus.html')
 
 @app.route('/shop')
+
 def shop():
-    return render_template('shop.html')
+    inventory= {'Acrylic Shield': [1500, 50, "static\images\Acrylic Sheild.jpg"],
+     'Card-keychain': [60, 50, "static\images\card-keychain.jpg"], 'Classwiz-Calculator': [2000, 50, "static\images\Casio Classwiz.jpeg"],
+     'Color-changing-mug': [600, 50, "static\images\colour changing Mug.jpg"], 'Corrector': [10, 50, "image"], 'Eraser': [5, 50, "static\images\eraser.jpeg"],
+     'HU-spiral-Notebook': [500, 50, "static\images\HU-Spiral Notebook.jpg"], 'Markers': [250, 50, "static\images\markers.jpeg"],'Pen': [40, 50, "static\images\pen.png"], 'Pencil': [10, 50, "static\images\pencil.jpeg"], 
+     'Scale': [5, 50, "static\images\scale.jpeg"], 'Sharpner': [60, 50, "static\images\sharpner.jpeg"], 'Stapler': [60, 50, "static\images\stapelar.jpeg"], 'Tape': [60, 50, "static\images\Tape.jpeg"], 
+     'White-notepad':[100, 50, "static\images\White notepad.jpg"], 'World-map-penset': [600, 50, "static\images\world-map pen set.jpg"]}
+    return render_template('shop.html',inventory=inventory)
 
 
 if __name__=="__main__":
-    app.run()
+    app.run(debug=True)
+
 

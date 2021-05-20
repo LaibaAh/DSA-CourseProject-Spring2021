@@ -20,14 +20,30 @@
    padding: 10px;
 }
 
-.left-column{
-    flex-basis: 25%;
+/* .left-column{
+    display: inline-block;
     padding: 10px;
     min-width: 200%;
     margin-bottom: 50px;
 
 
-}
+} */
+
+.left-column{
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .left-column:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .smallcontainer {
+    padding: 2px 16px;
+  }
 
 nav{
     flex: 1;
@@ -47,7 +63,8 @@ nav ul li{
 
 a{
    text-decoration: none;
-   color: rgb(3, 230, 135) 
+   align-self: center;
+   color: white;
 }
 
 p{
@@ -86,14 +103,14 @@ p{
     height: 380px;
     position: relative;
     margin: 6% auto;
-    background-color: wheat;
+    background-color: rgba(245, 222, 179, 0.705);
     padding: 5px;
     overflow: hidden;
 }
 
 .button-bar{
     width: 180px;
-    margin: 45px auto;
+    margin: 55px auto;
     position: relative;
 }
 
@@ -132,11 +149,3 @@ p{
 
 }
 
-#login{
-    left: 10px;
-}
-
-
-#SignUp{
-    left: 150px;
-}

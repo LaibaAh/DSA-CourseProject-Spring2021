@@ -25,28 +25,27 @@
             </nav>
         </div> 
 
-    <main class="container">
- 
+    <!-- <main class="container">
+        <div class="card">
+            <img src="img_avatar.png" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4><b>John Doe</b></h4>
+              <p>Architect & Engineer</p>
+            </div>
+          </div -->
+       
+        
     
         <div class="left-column">
-          <img src="static\images\7-colour changing Mug.jpg" width = "250x">
-          <h4>7-colour changing Mug</h4>
-          <p>500 Rs</p>
-          <img src="static\images\Acrylic Sheild.jpg" width = "250px">
-          <h4>Acrylic Sheild</h4>
-          <p>500 Rs</p>
-          <img src="static\images\card-keychain.jpg" width = "250px">
-          <h4>Key Chain</h4>
-          <p>500 Rs</p>
-          <img src="static\images\HU-Spiral Notebook.jpg" width = "250px">
-          <h4>HU-Spiral Notebook</h4>
-          <p>500 Rs</p>
-          <img src="static\images\White notepad.jpg" width = "250px">
-          <h4>White notepad</h4>
-          <p>500 Rs</p>
-          <img src="static\images\world-map pen set.jpg" width = "250px">
-          <h4>World Map Pen set</h4>
-          <p>500 Rs</p>
+            <div class ="smallcontainer">
+                {% for name,details in inventory.items() %}
+                <img src="{{ details[2] }}" width = "250px">
+                <h4>{{name}}</h4><a href="">Add to Cart</a>
+                <p>{{details[0]}} Rs</p>
+                {% endfor %}
+            </div>
+           
+
         </div>
        
        

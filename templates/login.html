@@ -9,7 +9,7 @@
     <div class="container">
         <div class="navbar">
             <div class="logo">
-                <img src="C:\Users\laiba\Desktop\HU-dukan\DSA-CourseProject-Spring2021\images\Dukaan Logo.png" width="125px">
+                <img src="static\images\Dukaan Logo.png" width="125px">
             </div>
             <nav>
                 <ul>
@@ -25,15 +25,15 @@
             </nav>
         </div> 
 
-    <form id ="login" class="form-box">
+    <form class="form-box">
         <div class="button-bar">
-            <button type="button" class="tog-button" href="C:\Users\laiba\Desktop\HU-dukan\DSA-CourseProject-Spring2021\login.html">Login</button>
-            <button type="button" class="tog-button" href="C:\Users\laiba\Desktop\HU-dukan\DSA-CourseProject-Spring2021\signup.html">SignUp</button>
+            <button type="button" class="tog-button"><a href= "/login">Login</a></button>
+            <button type="button" class="tog-button"><a href= "/signup">SignUp</a></button>
             
         </div>
         <div class="input">
-            <input type="text" class="input-area" placeholder="User Id " required>
-            <input type="password" class="input-area" placeholder="Enter password" required>
+            <input type="text" class="input-area" placeholder="User Id " name="Username" required>
+            <input type="password" class="input-area" placeholder="Enter password" name="Password" required>
             <button type="submit" class="submit">LogIn</button>
 
         </div>
@@ -41,22 +41,6 @@
     </form>
     
 
-    <script>
-        var x = document.getElementById("login")
-        var y = document.getElementById("SignUp")
-
-        function SignUp() {
-            x.style.left = "-400px";
-            y.style.left = "50px";
-
-        }
-
-        function login() {
-            x.style.left = "50px";
-            y.style.left = "450px";
-
-        }
-    </script>
 </head>
 <body>
     
