@@ -24,26 +24,20 @@
                 </ul>
             </nav>
         </div> 
-
-    <!-- <main class="container">
-        <div class="card">
-            <img src="img_avatar.png" alt="Avatar" style="width:100%">
-            <div class="container">
-              <h4><b>John Doe</b></h4>
-              <p>Architect & Engineer</p>
-            </div>
-          </div -->
        
         
     
         <div class="left-column">
-            <div class ="smallcontainer">
-                {% for name,details in inventory.items() %}
-                <img src="{{ details[2] }}" width = "250px">
-                <h4>{{name}}</h4><a href="">Add to Cart</a>
-                <p>{{details[0]}} Rs</p>
-                {% endfor %}
-            </div>
+            <form>
+                <div class ="smallcontainer">
+                    {% for name,details in inventory.items() %}
+                    <img src="{{ details[2] }}" width = "250px">
+                    <h4>{{name}}</h4><button class="add to cart" type="submit" action="/cart_added" method="POST">Add to cart</button>
+                    <p>{{details[0]}} Rs</p>
+                    {% endfor %}
+                </div>
+            </form>
+            
            
 
         </div>
