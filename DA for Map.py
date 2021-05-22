@@ -1,4 +1,5 @@
-ad_list = {"Hu Dukaan": [("Cafeteria", 2), ("Dhaaba", 2), ("East Street", 3)],
+ad_list = {
+           "Hu Dukaan": [("Cafeteria", 2), ("Dhaaba", 2), ("East Street", 3)],
            "East Street": [("Central Street 2", 4), ("Hu Dukaan", 3)],
            "Cafeteria": [("Central Lower Ground", 2), ("Gym", 4), ("Swimming Pool", 4), ("Amphitheater", 2), ("Hu Dukaan", 2), ("Central Street 2", 3)],
            "Central Lower Ground": [("Circuits and Electronic Lab 1", 3), ("Music Room", 2), ("Library", 4), ("Cafeteria", 2)],
@@ -45,7 +46,8 @@ ad_list = {"Hu Dukaan": [("Cafeteria", 2), ("Dhaaba", 2), ("East Street", 3)],
            "Faulty Pod": [("West Zone 1", 4)],
            "Prayer Area": [("Elevator", 5), ("Faculty Cafeteria", 2), ("Day Care", 1)],
            "Faculty Cafeteria": [("Prayer Area", 2)],
-           "Day Care": [("Prayer Area", 1)]}
+           "Day Care": [("Prayer Area", 1)]
+           }
 
 # Helper Functions
 
