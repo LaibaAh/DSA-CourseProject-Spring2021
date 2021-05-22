@@ -30,13 +30,21 @@
         <div class="left-column">
             <form>
                 <div class ="smallcontainer">
-                    {% for name,details in inventory.items() %}
-                    <img src="{{ details[2] }}" width = "250px">
-                    <h4>{{name}}</h4><button class="add to cart" type="submit" action="/cart_added" method="POST">Add to cart</button>
-                    <p>{{details[0]}} Rs</p>
-                    {% endfor %}
-                </div>
-            </form>
+                    <div class ="smallcontainer">
+                        {% for name,details in inventory.items() %}
+                        <img src="{{ details[2] }}" width = "250px">
+                        <h4>{{name}}</h4>
+                        <form action="{{url_for("AddtoCart")}}" method="post">
+                            <input type="hidden" name="product_name" value="{{name}}">
+                            <a href="/cart">Cart</a>
+                            <a href="/checkout">CheckOut</a>
+
+                            <label form="">Amount:</label>
+                            <input type="number" name="amount"  min="1" max="{{details[1]}}">
+                        </form>
+                        <p>{{details[0]}} Rs</p>
+                        {% endfor %}
+                    </div>
             
            
 

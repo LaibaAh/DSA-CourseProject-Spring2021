@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static\style.css">
-    <title>SignUp</title>
+    <title>CheckOut</title>
+</head>
+<body>
     <div class="container">
         <div class="navbar">
             <div class="logo">
@@ -17,34 +19,20 @@
                     <li><a href="/shop">Shop</a></li>
                     <li><a href="/contactus">Contact Us</a></li>
                     <li><a href="/login">Login/Sign-Up</a></li>
+                    <li><a href="/checkout">checkout</a></li>
                     <form class="searching">
                         <input class="searchbar" type="search" placeholder="Search" aria-label="Search">
                         <button class="press-search" type="submit">Search</button>
                     </form>
                 </ul>
+                
             </nav>
-        </div> 
-
-        <form class="form-box">
-            <div class="button-bar">
-                <button type="button" class="tog-button"><a href= "/login">Login</a></button>
-                <button type="button" class="tog-button"><a href= "/signup">SignUp</a></button>
-            </div>
-            <form method="POST" action="/login_action"></form>
+            <form class="form-box">
                 <div class="input">
-                    <input type="email" class="input-area" placeholder="Enter Email" required>
-                    <input type="text" class="input-area" placeholder="User Id " required>
-                    <input type="password" class="input-area" placeholder="Enter password" required>
-                    <button type="submit" class="submit">Sign-Up</button>
-        
-                </div>
+                    <input type="text" class="input-area" placeholder="Enter Your destination" name="Destination" required>
+                    <button type="submit" class="submit">Submit</button>
+                    <output type="text" placeholder="Your Estimated delivery time"></output>
             </form>
-    
-        </form>
-       
-
-</head>
-<body>
     
 </body>
 </html>

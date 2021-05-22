@@ -101,7 +101,7 @@ p{
 .form-box{
     width: 380px;
     height: 380px;
-    position: relative;
+    position: center;
     margin: 6% auto;
     background-color: rgba(245, 222, 179, 0.705);
     padding: 5px;

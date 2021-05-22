@@ -14,6 +14,7 @@ def insertion_sort(item_list):
 sorted_list = insertion_sort(item_list)
 
 inventory = {}
+    
 for i in sorted_list:
     inventory[i] = []
 print(inventory)
