@@ -3,6 +3,7 @@ from flask import url_for
 import os
 from flask.globals import session 
 from flask_sqlalchemy import SQLAlchemy
+import sqlite3
 
 inventory= {'Acrylic Shield': [1500, 50, "static\images\Acrylic Sheild.jpg"],
      'Card-keychain': [60, 50, "static\images\card-keychain.jpg"], 'Classwiz-Calculator': [2000, 50, "static\images\Casio Classwiz.jpeg"],
@@ -14,13 +15,16 @@ inventory= {'Acrylic Shield': [1500, 50, "static\images\Acrylic Sheild.jpg"],
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:////inventory.db"
 
-db = SQLAlchemy(app)
 
-class Products(db.Model):
-    product_id = db.Column(db.String , primary_key= True)
+DATABASE = 'output.sqlite'
+
+def get_db():
+    db = getattr(g, '_database', None)
+    if db is None:
+        db = g._database = sqlite3.connect(DATABASE)
+    return db
+
 
 
 
@@ -54,14 +58,21 @@ def shop():
     return render_template('shop.html',inventory=inventory)
 
 
-@app.route('/cart')
+@app.route('/cart', methods=["GET" , "POST"])
 def cart():
-    return render_template("cart.html")
+    if request.method == "POST":
+        
+    
+
 
 
 @app.route("/checkout")
 def checkout():
     return render_template('checkout.html')
+
+
+
+
 
 
 if __name__=="__main__":

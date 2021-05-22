@@ -1,0 +1,17 @@
+Product_name,Product_price,Product_quantity,Image_path
+Pencil,10,50,"static\images\pencil.jpeg"
+Pen,40,50,"static\images\pen.png"
+Sharpener,60,50,"static\images\sharpner.jpeg"
+Eraser,5,50,"static\images\eraser.jpeg"
+Markers,250,50,"static\images\markers.jpeg"
+Tape,60,50,"static\images\Tape.jpeg"
+Classwiz-Calculator,2000,50,"static\images\Casio Classwiz.jpeg"
+Corrector,10,50,image
+Stapler,60,50,"static\images\stapelar.jpeg"
+Scale,5,50,"static\images\scale.jpeg"
+Color-changing-mug,600,50,"static\images\colour changing Mug.jpg"
+Acrylic Sheild,1500,50,"static\images\Acrylic Sheild.jpg"
+Card-keychain,60,50,"static\images\card-keychain.jpg"
+White-notepad,100,50,"static\images\White notepad.jpg"
+World-map-penset,600,50,"static\images\world-map pen set.jpg"
+HU-spiral-Notebook,500,50,"static\images\HU-Spiral Notebook.jpg"
