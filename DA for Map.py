@@ -1,5 +1,5 @@
-
-ad_list = {"Hu Dukaan": [("Cafeteria", 2), ("Dhaaba", 2), ("East Street", 3)],
+ad_list = {
+           "Hu Dukaan": [("Cafeteria", 2), ("Dhaaba", 2), ("East Street", 3)],
            "East Street": [("Central Street 2", 4), ("Hu Dukaan", 3)],
            "Cafeteria": [("Central Lower Ground", 2), ("Gym", 4), ("Swimming Pool", 4), ("Amphitheater", 2), ("Hu Dukaan", 2), ("Central Street 2", 3)],
            "Central Lower Ground": [("Circuits and Electronic Lab 1", 3), ("Music Room", 2), ("Library", 4), ("Cafeteria", 2)],
@@ -46,7 +46,8 @@ ad_list = {"Hu Dukaan": [("Cafeteria", 2), ("Dhaaba", 2), ("East Street", 3)],
            "Faulty Pod": [("West Zone 1", 4)],
            "Prayer Area": [("Elevator", 5), ("Faculty Cafeteria", 2), ("Day Care", 1)],
            "Faculty Cafeteria": [("Prayer Area", 2)],
-           "Day Care": [("Prayer Area", 1)]}
+           "Day Care": [("Prayer Area", 1)]
+           }
 
 # Helper Functions
 
@@ -90,18 +91,6 @@ def minimumdistance(lst, visited):
             pair = lst[i]
     return pair
 
-# getting the weights
-
-
-def weight(ad_list, previ, s):
-    first = previ[1]
-    weigh = 0
-    u = ad_list[first]
-    for i in range(len(u)):
-        if u[i][0] == s[0]:
-            weigh = u[i][1]
-            # print(weigh)
-    return weigh
 
 # getting the neighbours of the extracted node.
 
@@ -143,102 +132,3 @@ def getShortestPath(ad_list, start, Des):  # Dijkstra
         visited.append(m[1])
         # Removing it from the queue after extraction.
         q.remove(m[1])
-
-        previ = m
-        # starting to update the neighbours in lst, if less weight is found then update.
-
-        x = place(previ, lst)
-
-        while len(node) != 0:
-            s = node[0]
-            popping = node.pop(0)
-
-            for n in range(len(lst)):
-                # if the place is nodes in lst
-                if s[0] == lst[n][1]:
-                    r = n  # neheighbour index
-
-            weight_n = lst[x][2] + weight(ad_list, previ, s)
-
-            # updating the weight if new weight found is less in the list.
-            if lst[r][2] > weight_n:
-                # update the node as well.
-                lst[r][2] = weight_n
-                lst[r][0] = previ[1]
-
-    # got all edges time in list. #print(lst)
-# getting the path from Hu Dukaan to the destination!
-    lst_it = []
-    for i in range(len(lst)):
-        # print(sd[i][0])
-        places = lst[i][1]
-        times = lst[i][0]
-        if places == Des and times != start:
-            lst_it.append(lst[i])
-
-            while lst[i][0] != start:
-
-                for j in range(len(lst)):
-                    # simple comparsion from the value.
-                    if lst[j][1] == lst[i][0]:
-                        if lst[j][0] != start:
-                            lst_it.append(lst[j])
-                            lst[i] = lst[j]
-                        else:
-                            lst.append(lst[j])
-                            path = lst_it[::-1]
-                            return path
-# for directly connected nodes time from the hu dukaan.
-        elif lst[i][1] == Des and lst[i][0] == start:
-            return [lst[i]]
-    path = lst_it[::-1]
-
-    return path
-
-
-# First as the customer for the proper Destination.
-Your_Destination = input(("Please write your destination for the delivery: "))
-
-# If proper destination not written then print the message Enter valid destination.
-
-if Your_Destination not in ad_list:
-    print("Invalid Destination")
-
-# running our DA algorithm to get the minimum time from Hu dukaan to customer's destination, simple.
-result = (getShortestPath(ad_list, "Hu Dukaan", Your_Destination))
-# print(result) #uncomment to view the traversed path.
-
-# for displaying the minimum delivery time found through our DA algo.
-
-
-def delivery_time(result, Start):
-    lst1 = []
-    Start = "Hu Dukaan"
-    lst1.append(Start)
-    # print(len(result))
-    # if result len is greater than 0 getting the hu dukaan then delivery time for that destination from hu Dukaan)
-    if len(result) > 0:
-        delivery_time = (result[len(result)-1][2])
-        print("The Total Delivery Time is: ", delivery_time, "minutes")
-    # else this!
-    # that is the node is not persent/ destination not valid so result list will be empty!
-    elif len(result) == 0:
-        delivery_time = 0
-        print("Can't determine the delivery time! Please, Enter Valid Destination (Input): ",
-              delivery_time, "minutes")
-# getting the trasvered path as well for the customer  to see.
-    for i in result:
-        delivery_place = i[1]
-        lst1.append(delivery_place)
-    print("The Shortest Path from Hu Dukaan to your destination is: ", lst1)
-
-    # print(lst1)
-
-
-Start = "Hu Dukaan"
-(delivery_time(result, Start))
-
-# Note:
-# we have kept the input format to me like this "Zen Garden", "Arif Habib Classroom",
-# that is each world starts with a
-# capital letter. and each letter has a space between them.

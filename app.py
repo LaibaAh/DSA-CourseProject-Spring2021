@@ -58,10 +58,10 @@ def shop():
     return render_template('shop.html',inventory=inventory)
 
 
-@app.route('/cart', methods=["GET" , "POST"])
-def cart():
-    if request.method == "POST":
-        
+# @app.route('/cart', methods=["GET" , "POST"])
+# def cart():
+#     if request.method == "POST":
+
     
 
 
