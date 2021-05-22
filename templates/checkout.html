@@ -27,12 +27,10 @@
                 </ul>
                 
             </nav>
-            <form class="form-box">
-                <div class="input">
-                    <input type="text" class="input-area" placeholder="Enter Your destination" name="Destination" required>
-                    <button type="submit" class="submit">Submit</button>
-                    <output type="text" placeholder="Your Estimated delivery time"></output>
+            <form action="/test" method="post">
+                <input type="text" name="destination"></input>
+                <input type="submit" value="submit"></input>
             </form>
-    
+            <p>{{ output }}</p>
 </body>
 </html>

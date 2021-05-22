@@ -4,6 +4,7 @@ import os
 from flask.globals import session 
 from flask_sqlalchemy import SQLAlchemy
 import sqlite3
+from algorithm import *
 
 inventory= {'Acrylic Shield': [1500, 50, "static\images\Acrylic Sheild.jpg"],
      'Card-keychain': [60, 50, "static\images\card-keychain.jpg"], 'Classwiz-Calculator': [2000, 50, "static\images\Casio Classwiz.jpeg"],
@@ -38,6 +39,8 @@ def home():
 def login():
     return render_template('login.html')
 
+
+
 @app.route('/signup', methods=['GET','POST'])
 def signup():
     return render_template('signup.html')
@@ -58,17 +61,36 @@ def shop():
     return render_template('shop.html',inventory=inventory)
 
 
-# @app.route('/cart', methods=["GET" , "POST"])
-# def cart():
-#     if request.method == "POST":
+@app.route('/cart', methods=["GET" , "POST"])
+def cart():
+    request_data = request.get_json()
+
+    name = request_data['name']
+    price = request_data['price']
+    print(name,price)
+
+   
+    
+    return render_template('cart.html')
+
+
+@app.route('/checkout', methods = ['POST'])
+def checkout():
+    destination = request.form['destination']
+    print("Your destination is '" + destination + "'")
+    # calling your distance algo
+    result = (getShortestPath(ad_list, "Hu Dukaan", destination))
+    delivery_time = (result[len(result)-1][2])
+    # printing the result of your shortest time
+    print(delivery_time)
+    # displaying it in html
+    return render_template('checkout.html', output=delivery_time)
 
     
 
 
 
-@app.route("/checkout")
-def checkout():
-    return render_template('checkout.html')
+
 
 
 
