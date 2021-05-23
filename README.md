@@ -28,7 +28,9 @@ You can simply click on  https://hu-edukaan.herokuapp.com/checkoutone to see the
 
 
 ## How the Application works:
-As you land on the page you will see; ![image](https://user-images.githubusercontent.com/75496144/119269430-19e78000-bc11-11eb-9156-ec4c6c3376d1.png)
+As you land on the page you will see; 
+![image](https://user-images.githubusercontent.com/75496144/119269430-19e78000-bc11-11eb-9156-ec4c6c3376d1.png)
+
 this is a drop down menu that has all the possible destinations. After selecting, click submit. Your estimated display time would be displayed. 
 
 ### Additional Features of the Application and Challenges: 
