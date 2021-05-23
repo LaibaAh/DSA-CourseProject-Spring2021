@@ -35,8 +35,10 @@
             <img src="{{ details[2] }}" width="250">
             <h4>{{name}}</h4>
                 
-                <button onclick ="addToCart('{{name}}','{{details[0]}}')">Add to Cart</button>
+            <button onclick ="addToCart('{{name}}','{{details[0]}}')">Add to Cart</button>
+            <h4><a href="/checkoutone">Checkout</a></h4>
             <p>{{details[0]}} Rs</p>
+            
             
             </div>
             {% endfor %}

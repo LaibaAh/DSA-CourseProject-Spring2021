@@ -103,7 +103,7 @@ def cart():
     total_price += int(price) 
     print(total_price)
     
-    return render_template('checkout.html', inventory=inventory, output=total_price)
+    return render_template('cart.html', inventory=inventory, display_price=price, display_name=name)
 
 
 @app.route('/checkoutone')
