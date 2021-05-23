@@ -6,6 +6,9 @@ All you have to do Place your order, estimated time of delivery would be provide
 
 You can acsess the web application at: https://hu-edukaan.herokuapp.com/checkoutone
 
+The flask based codes were mostly edited from the official documentation: https://flask.palletsprojects.com/en/2.0.x/
+
+
 ## Data Structures and Algorithms Used:
 * The main Algoritm used in this project is Dijikstra's Algorithm to find the shortest path from HU-Dukaan to Your selected destination from the dropdown menu 
 * Data Structures Used Are: 
