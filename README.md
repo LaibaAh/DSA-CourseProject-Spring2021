@@ -8,10 +8,10 @@ You can acsess the web application at: https://hu-edukaan.herokuapp.com/checkout
 
 ## Data Structures and Algorithms
 * The main Algoritm used in this project is Dijikstra's Algorithm to find the shortest path from HU-Dukaan to Your selected destination from the dropdown menu 
-* Data Structures used: 
-- Dictionary 
-- Graph 
-* The dictionary is used to store the inventory, while the graph data structures helps create the map of the university. 
+* Data Structures Used Are: 
+   1. Dictionary, Stack
+   2. Graph 
+* The dictionary and stacks is used to store the inventory and update items in the cart, while the graph data structures helps create the map of the university. 
 
 ## How to get the Code Running? 
 You can simply click on  https://hu-edukaan.herokuapp.com/checkoutone to see the output frontend, however to get this file running on your computer you would have to:
