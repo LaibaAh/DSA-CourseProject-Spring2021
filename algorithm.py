@@ -1,3 +1,6 @@
+#this file is the backend (mainly the backbone of our code) as the main feature of our web application was to find the shortest path 
+#to deliver the objects and return the shortest time this is the dijikstra's implememtation of that fiunction
+
 ad_list = {"Hu Dukaan": [("Cafeteria", 2), ("Dhaaba", 2), ("East Street", 3)],
            "East Street": [("Central Street 2", 4), ("Hu Dukaan", 3)],
            "Cafeteria": [("Central Lower Ground", 2), ("Gym", 4), ("Swimming Pool", 4), ("Amphitheater", 2), ("Hu Dukaan", 2), ("Central Street 2", 3)],

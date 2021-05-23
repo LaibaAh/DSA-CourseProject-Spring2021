@@ -28,13 +28,15 @@
         </div> 
        
         
-    
+        <!-- this is called jinja templating here we are calling names and images from our inventorty -->
         <div class="smallcontainer">
-            {% for name,details in inventory.items() %}
+            <!-- this loops through the dictionary -->
+            {% for name,details in inventory.items() %} 
             <div class="left-column">
+            <!-- loads the image -->
             <img src="{{ details[2] }}" width="250">
-            <h4>{{name}}</h4>
-                
+            <h4>{{name}}</h4>  
+            <!-- calls a function written in the script tag upon calling -->
             <button onclick ="addToCart('{{name}}','{{details[0]}}')">Add to Cart</button>
             <h4><a href="/checkoutone">Checkout</a></h4>
             <p>{{details[0]}} Rs</p>
@@ -48,9 +50,11 @@
 </body>
 
 <script>
+    // this script tag fetches the name and the details of the item when you click on the button and sends a post request to the 
+    // flask front end 
     function addToCart(name,details) {
         var xhr = new XMLHttpRequest();
-        var url = "/cart";
+        var url = "/checkout";
         xhr.open("POST", url, true);
         xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         var data = JSON.stringify({"name": name,"details": details});

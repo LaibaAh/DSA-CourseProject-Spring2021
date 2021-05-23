@@ -29,66 +29,68 @@
 </head>
 
 <body>
+    
 
     
-    
-    <form action="/checkout" method="post" class="form-box">
-        <select name='destination'placeholder='value' >
-            <option value='Hu Dukaan'>Hu Dukaan</option>
-            <option value='East Street'>East Street</option>
-            <option value='Cafeteria'>Cafeteria</option>
-            <option value='Central Lower Ground'>Central Lower Ground</option>
-            <option value='Circuits and Electronic Lab 1'>Circuits and Electronic Lab 1</option>
-            <option value='Music Room'>Music Room</option>
-            <option value='Linux And Networking Lab'>Linux And Networking Lab</option>
-            <option value='Visualization And Graphics Lab'>Visualization And Graphics Lab</option>
-            <option value='Swimming Pool'>Swimming Pool</option>
-            <option value='Gym'>Gym</option>
-            <option value='Dhaaba'>Dhaaba</option>
-            <option value='Zen Garden'>Zen Garden</option>
-            <option value='Central Street 1'>Central Street 1</option>
-            <option value='Wellness Courtyard'>Wellness Courtyard</option>
-            <option value='Office Of Student Life'>Office Of Student Life</option>
-            <option value='Central Street 2'>Central Street 2</option>
-            <option value='Earth Courtyard'>Earth Courtyard</option>
-            <option value='Air Courtyard'>Air Courtyard</option>
-            <option value='Water Courtyard'>Water Courtyard</option>
-            <option value='Fire Courtyard'>Fire Courtyard</option>
-            <option value='Chemistry Lab'>Chemistry Lab</option>
-            <option value='Digital Systems and Instrumentation Lab'>Digital Systems and Instrumentation Lab</option>
-            <option value='Arif Habib Classroom'>Arif Habib Classroom</option>
-            <option value='Learn Courtyard'>Learn Courtyard</option>
-            <option value='Student Lounge'>Student Lounge</option>
-            <option value='Multipurpose Sports Courts 1'>Multipurpose Sports Courts 1</option>
-            <option value='Amphitheater'>Amphitheater</option>
-            <option value='Engineering Workshop'>Engineering Workshop</option>
-            <option value='Soorty Hall'>Soorty Hall</option>
-            <option value='Library'>Library</option>
-            <option value='Reception'>Reception</option>
-            <option value='Student Center'>Student Center</option>
-            <option value='Elevator'>Elevator</option>
-            <option value='East Zone'>East Zone</option>
-            <option value='Tariq Rafi Lecture Theater'>Tariq Rafi Lecture Theater</option>
-            <option value='Film Studio'>Film Studio</option>
-            <option value='Mehfil'>Mehfil</option>
-            <option value='West Zone 1'>West Zone 1</option>
-            <option value='West Zone 2'>West Zone 2</option>
-            <option value='Amin Issa Tai Classroom'>Amin Issa Tai Classroom</option>
-            <option value='Design Studio'>Design Studio</option>
-            <option value='Baithak'>Baithak</option>
-            <option value='Auditorium Hall'>Auditorium Hall</option>
-            <option value='Playground'>Playground</option>
-            <option value='Faulty Pod'>Faulty Pod</option>
-            <option value='Prayer Area'>Prayer Area</option>
-            <option value='Faculty Cafeteria'>Faculty Cafeteria</option>
-            <option value='Day Care'>Day Care</option>       
-    
-        </select>
-        <input type="submit" value="submit" ></input>
-        <p>The expected Time of Delivery to your selected destination is {{ output }} minutes</p>
-                
-                
-    </form>
+    <div class="input">
+        <form action="/checkout" method="post" class="form-box">
+            <select name='destination'placeholder='value' >
+                <option value='Hu Dukaan'>Hu Dukaan</option>
+                <option value='East Street'>East Street</option>
+                <option value='Cafeteria'>Cafeteria</option>
+                <option value='Central Lower Ground'>Central Lower Ground</option>
+                <option value='Circuits and Electronic Lab 1'>Circuits and Electronic Lab 1</option>
+                <option value='Music Room'>Music Room</option>
+                <option value='Linux And Networking Lab'>Linux And Networking Lab</option>
+                <option value='Visualization And Graphics Lab'>Visualization And Graphics Lab</option>
+                <option value='Swimming Pool'>Swimming Pool</option>
+                <option value='Gym'>Gym</option>
+                <option value='Dhaaba'>Dhaaba</option>
+                <option value='Zen Garden'>Zen Garden</option>
+                <option value='Central Street 1'>Central Street 1</option>
+                <option value='Wellness Courtyard'>Wellness Courtyard</option>
+                <option value='Office Of Student Life'>Office Of Student Life</option>
+                <option value='Central Street 2'>Central Street 2</option>
+                <option value='Earth Courtyard'>Earth Courtyard</option>
+                <option value='Air Courtyard'>Air Courtyard</option>
+                <option value='Water Courtyard'>Water Courtyard</option>
+                <option value='Fire Courtyard'>Fire Courtyard</option>
+                <option value='Chemistry Lab'>Chemistry Lab</option>
+                <option value='Digital Systems and Instrumentation Lab'>Digital Systems and Instrumentation Lab</option>
+                <option value='Arif Habib Classroom'>Arif Habib Classroom</option>
+                <option value='Learn Courtyard'>Learn Courtyard</option>
+                <option value='Student Lounge'>Student Lounge</option>
+                <option value='Multipurpose Sports Courts 1'>Multipurpose Sports Courts 1</option>
+                <option value='Amphitheater'>Amphitheater</option>
+                <option value='Engineering Workshop'>Engineering Workshop</option>
+                <option value='Soorty Hall'>Soorty Hall</option>
+                <option value='Library'>Library</option>
+                <option value='Reception'>Reception</option>
+                <option value='Student Center'>Student Center</option>
+                <option value='Elevator'>Elevator</option>
+                <option value='East Zone'>East Zone</option>
+                <option value='Tariq Rafi Lecture Theater'>Tariq Rafi Lecture Theater</option>
+                <option value='Film Studio'>Film Studio</option>
+                <option value='Mehfil'>Mehfil</option>
+                <option value='West Zone 1'>West Zone 1</option>
+                <option value='West Zone 2'>West Zone 2</option>
+                <option value='Amin Issa Tai Classroom'>Amin Issa Tai Classroom</option>
+                <option value='Design Studio'>Design Studio</option>
+                <option value='Baithak'>Baithak</option>
+                <option value='Auditorium Hall'>Auditorium Hall</option>
+                <option value='Playground'>Playground</option>
+                <option value='Faulty Pod'>Faulty Pod</option>
+                <option value='Prayer Area'>Prayer Area</option>
+                <option value='Faculty Cafeteria'>Faculty Cafeteria</option>
+                <option value='Day Care'>Day Care</option>       
+        
+            </select>
+            <input type="submit" value="submit" ></input>
+            <p>The expected Time of Delivery to your selected destination is {{ output }} minutes</p>
+                    
+                    
+        </form>
+    </div>
             
             
             

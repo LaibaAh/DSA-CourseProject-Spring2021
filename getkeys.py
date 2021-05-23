@@ -1,3 +1,6 @@
+#the only purpose of this file is to automate html option tags so i dont have to manually add themm
+
+
 ad_list = {"Hu Dukaan": [("Cafeteria", 2), ("Dhaaba", 2), ("East Street", 3)],
            "East Street": [("Central Street 2", 4), ("Hu Dukaan", 3)],
            "Cafeteria": [("Central Lower Ground", 2), ("Gym", 4), ("Swimming Pool", 4), ("Amphitheater", 2), ("Hu Dukaan", 2), ("Central Street 2", 3)],
