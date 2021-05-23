@@ -29,17 +29,19 @@
        
         
     
-        <div class="left-column">
-           {% for name,details in inventory.items() %}
-           
-           <img src="{{ details[2] }}" width="250">
-           <h4>{{name}}</h4>
+        <div class="smallcontainer">
+            {% for name,details in inventory.items() %}
+            <div class="left-column">
+            <img src="{{ details[2] }}" width="250">
+            <h4>{{name}}</h4>
+                
+                <button onclick ="addToCart('{{name}}','{{details[0]}}')">Add to Cart</button>
+            <p>{{details[0]}} Rs</p>
             
-            <button onclick ="addToCart('{{name}}','{{details[0]}}')">Add to Cart</button>
-            
-           <p>{{details[0]}} Rs</p>
-           {% endfor %}
+            </div>
+            {% endfor %}
         </div>
+        
     
 </body>
 
