@@ -17,12 +17,14 @@ You can acsess the web application at: https://hu-edukaan.herokuapp.com/checkout
 You can simply click on  https://hu-edukaan.herokuapp.com/checkoutone to see the output frontend, however to get this file running on your computer you would have to:
 * pip install flask 
 * Run file: app.py 
-* here finally the app runs, cntrl+enter runs the file and outputs 
-       * Debug mode: on
-       * Restarting with stat
-       * Debugger is active!
-       * Debugger PIN: 184-775-028
-       * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+* here finally the app runs, cntrl+enter runs the file and outputs:
+'''
+* Debug mode: on
+* Restarting with stat
+* Debugger is active!
+* Debugger PIN: 184-775-028
+* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+'''
 
 #this is a local link that you can host on your local server and will open the file on your browser
 
@@ -37,6 +39,12 @@ this is a drop down menu that has all the possible destinations. After selecting
 * There are alot of additional features on the web application, suchas the add to cart button (this is a known bug) on the console even after getting the request from the button their is no display on the front-end server. So to show the working, the code is written in the @app.route('/cart) function and in the inventory.py file that shows how the cart is updated as we recieve orders. 
 * Login/sign Up feature: As this feature was neither in our proposal nor a main feature and required data base sytems to store and get ids of users we have routed the files but you can still see them on the page as a dummy feature to add the feel of a real-world e-commerce web application. 
 
+### File Categories: 
+* app.py (The Flask Backend)
+* algorithm.py (Dijikstra Implementation Backend)
+* The template folder includes all the html files, while the static folder has the css style sheet. 
+* inventory.py (Cart implementation Backend)
+* output.sqlite (Not used : But the data base of the inventory) 
 
 
 
