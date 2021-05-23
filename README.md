@@ -4,7 +4,7 @@ Habib University E-Dukaan
 Habib University has a Dukaan located at the ground floor in the university premises that sells all necessary stationary items you may need while you are in the University. We Aim to bring the dukaan on your computer. While you are busy and suddenly notice that you would need a set of pencils before your class begins, we provide you a deliery service. 
 All you have to do Place your order, estimated time of delivery would be provided and your problem would be solved. 
 
-You can acsess the web application at: https://hu-edukaan.herokuapp.com/checkoutone
+You can acsess the web application at: https://hu-edukaan.herokuapp.com/checkoutone  (Hosted on Heroku:  a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud)
 
 The flask based codes were mostly edited from the official documentation: https://flask.palletsprojects.com/en/2.0.x/
 
