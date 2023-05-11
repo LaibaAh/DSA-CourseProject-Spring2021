@@ -1,5 +1,7 @@
 # DSA-CourseProject-Spring2021
 Habib University E-Dukaan
+
+(the heroku link has now expired due to inactivity)
 ## Introduction:
 Habib University has a Dukaan located at the ground floor in the university premises that sells all necessary stationary items you may need while you are in the University. We Aim to bring the dukaan on your computer. While you are busy and suddenly notice that you would need a set of pencils before your class begins, we provide you a deliery service. 
 All you have to do Place your order, estimated time of delivery would be provided and your problem would be solved. 
